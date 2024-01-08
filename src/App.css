@@ -2,37 +2,95 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Search {
+  display: flex;
+  gap: 10px;
+  text-align: center;
+  width: 1026px;
+  margin: auto;
+  padding: 40px;
+  background: #d9d9d9;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Search input,
+.Search button {
+  height: 64px;
+  border: none;
+  border-radius: 32px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Search input {
+  width: 700px;
+}
+
+.Search button {
+  width: 64px;
+  cursor: pointer;
+}
+
+.List {
+  display: flex;
+  width: 1026px;
+  padding: 40px;
+  gap: 40px;
+  margin: auto;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  background: #f5f5f5;
+}
+
+.Card {
+  /* display: flex; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-flow: dense;
+  gap: 10px;
+  padding: 10px;
+  width: 453px;
+  height: 206px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.Card img.Reverse {
+  grid-column: 2;
+}
+
+.Card img {
+  width: calc(100% - 20px);
+  margin: auto;
+}
+
+.Card .Card-img-loading {
+  background: #d9d9d9;
+  border-radius: 50%;
+  width: 186px;
+  height: 186px;
+}
+
+.Card-info {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 0px;
+  padding: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.Card-info.Reverse {
+  grid-column: 1;
+  text-align: right;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Card-info h3 {
+  color: #212121;
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.Card-info h4 {
+  color: #616161;
+  font-size: 28px;
+  font-style: italic;
+  font-weight: 400;
 }
